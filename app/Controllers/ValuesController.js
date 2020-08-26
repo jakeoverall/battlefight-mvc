@@ -1,4 +1,4 @@
-import ValuesService from "../Services/ValuesService.js";
+import STORE from "../store.js";
 
 console.log("step values controller line 3")
 
@@ -7,6 +7,6 @@ export default class ValuesController {
   constructor() {
 
     console.log("The Values Controller Constructor")
-    ValuesService
+    STORE.State.values
   }
 }

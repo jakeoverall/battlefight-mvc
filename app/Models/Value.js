@@ -1,5 +1,3 @@
-console.log("step Value Model line 1")
-
 export default class Value {
     constructor(data) {
         this.title = data.title
@@ -9,3 +7,5 @@ export default class Value {
         return this.title
     }
 }
+
+
