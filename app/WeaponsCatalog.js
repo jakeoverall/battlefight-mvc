@@ -1,4 +1,4 @@
-import { Weapon } from "./Models/Weapon";
+import { Weapon } from "./Models/Weapon.js";
 
 export const enemyWeapons = {
   teeth: new Weapon("teeth", 1, 0),

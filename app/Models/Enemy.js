@@ -1,4 +1,4 @@
-import { Weapon } from "./Weapon";
+import { Weapon } from "./Weapon.js";
 
 export class Enemy {
   /**
@@ -7,12 +7,13 @@ export class Enemy {
    * @param {number} health
    * @param {number} experienceGivenOnDeath
    * @param {Weapon} weapon
+   * @param {"Orc" | "Troll" | "Bunny"} type
    */
-  constructor(name, health, experienceGivenOnDeath, weapon) {
+  constructor(name, health, experienceGivenOnDeath, weapon, type) {
     this.name = name;
     this.health = health;
     this.experienceGivenOnDeath = experienceGivenOnDeath;
     this.weapon = weapon;
+    this.type = type;
   }
-
 }

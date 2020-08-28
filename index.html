@@ -7,12 +7,54 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/style.css">
     <title>battlefight</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
 </head>
 
 <body>
+    <header class="container-fluid">
 
-    <h1>Hello battlefight</h1>
+    </header>
+    <main class="container-fluid">
+        <div id="player"></div>
 
+        <!-- name, health, experienceGivenOnDeath, weapon, type -->
+        <form onsubmit="app.enemiesController.createEnemy()">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="health">Health:</label>
+                <input type="text" class="form-control" name="health" required>
+            </div>
+            <div class="form-group">
+                <label for="experienceGivenOnDeath">Experience Given On Death:</label>
+                <input type="text" class="form-control" name="experienceGivenOnDeath" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Weapon:</label>
+                <input type="text" class="form-control" name="weapon">
+            </div>
+            <div class="form-group">
+                <label for="type">Type:</label>
+                <select name="type" class="form-control">
+                    <!-- "Orc" | "Troll" | "Bunny" -->
+                    <option value="Bunny" selected>Bunny</option>
+                    <option value="Orc">Orc</option>
+                    <option value="Troll">Troll</option>
+                </select>
+            </div>
+            <div class="button-group">
+                <button type="submit" class="btn btn-info">Add Enemy</button>
+                <button type="reset" class="btn btn-danger">Clear</button>
+            </div>
+        </form>
+
+        <div id="enemies"></div>
+    </main>
+    <footer></footer>
 
     <script src="app/main.js" type="module"></script>
 </body>
